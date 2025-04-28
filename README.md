@@ -23,7 +23,8 @@ Browse (after auth)
         -Title & descriprtion
         -Movie Suggestions
         -MovieLists * N
--NetflisGPT
+CinemaWala
     -search Bar
     -Movie Suggestions
-    
+
+

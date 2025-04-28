@@ -3,12 +3,12 @@ const BodyCard = ()=>(
     <div className="w-14/15 m-auto ">
       <div
         data-testid="BodyCard"
-        className=" absolute w-14/15 h-150 bg-cover bg-center rounded-2xl  p-0"
+        className=" absolute w-14/15 h-150 bg-cover bg-center rounded-b-2xl  p-0"
         src={LOGIN_BG_IMG}
       >
-        <img className="w-full h-full rounded-2xl" src={LOGIN_BG_IMG}></img>
+        <img className="w-full h-full rounded-b-2xl" src={LOGIN_BG_IMG}></img>
       </div>
-      <div className=" absolute w-14/15 h-150 bg-black  p-0 opacity-70 rounded-2xl"></div>
+      <div className=" absolute w-14/15 h-150 bg-black  p-0 opacity-70 rounded-b-2xl"></div>
 
       <div className=" relative w-full h-150 flex flex-col justify-center items-center  ">
         <h1 className="text-8xl font-extrabold text-white">
