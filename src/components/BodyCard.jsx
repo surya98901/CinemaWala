@@ -1,5 +1,15 @@
 import { LOGIN_BG_IMG } from "../assets/constants";
-const BodyCard = ()=>(
+import { useNavigate } from "react-router-dom";
+
+
+
+
+const BodyCard = ()=>{
+  const navigate = useNavigate();
+  const HandleValidation= ()=>{
+    navigate("/login");
+  }
+  return (
     <div className="w-14/15 m-auto ">
       <div
         data-testid="BodyCard"
@@ -20,17 +30,14 @@ const BodyCard = ()=>(
         <h3 className="text-2xl font-bold text-white mt-20">
           Ready to watch? Enter your email to create or restart your membership.
         </h3>
-        <form className="flex mt-4 w-full justify-center items-center">
-          <input
-            type="email"
-            placeholder="Email address"
-            className="w-3/9 h-15 py-5 px-4 m-4 rounded-2xl border text-2xl  text-gray-100 bg-gray-600 border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 opacity-70"
-          />
-          <button className="bg-red-600 text-white text-2xl font-bold rounded-2xl p-4 px-4 mx-4">
+        <form className="flex mt-4 w-full justify-center items-center"
+        onSubmit={(e) => e.preventDefault()}>
+          <button className="w-3/9 h-15 p-4 m-4 rounded-2xl bg-red-600 text-white text-2xl font-bold  mx-4"
+          onClick={HandleValidation}>
             Get Started
           </button>
         </form>
       </div>
     </div>
-);
+);}
 export default BodyCard;
