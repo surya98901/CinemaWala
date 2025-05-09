@@ -13,6 +13,7 @@ import { addUser } from "../assets/userSlice";
 import { auth } from "../assets/firebase";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
+import Header from "./Header";
 
 const Login = () => {
   const [isSignInForm, setIsSignInForm] = useState(true);
@@ -59,7 +60,6 @@ const Login = () => {
                   // An error occurred
                   const errorCode = error.code;
                   const errorMessage = error.message;
-                  console.log(errorCode, errorMessage);
                 });
             })
             .catch((error) => {
@@ -96,6 +96,8 @@ const Login = () => {
   };
 
   return (
+    <>
+    <Header UserSignedIn={false} />
     <div
       data-testid="Login"
       className="w-full h-screen flex flex-col justify-center items-center  "
@@ -189,6 +191,7 @@ const Login = () => {
         </div>
       </form>
     </div>
+    </>
   );
 };
 export default Login;

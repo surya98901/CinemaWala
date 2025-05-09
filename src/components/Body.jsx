@@ -7,7 +7,10 @@ const Body = () => {
   return (
     <div>
       <Header UserSignedIn = {false}/>
-      <BodyCard />
+
+        <BodyCard />
+
+      
     </div>
   );
 };
